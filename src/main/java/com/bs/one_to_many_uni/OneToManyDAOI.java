@@ -1,4 +1,4 @@
-package com.bs.one_to_many;
+package com.bs.one_to_many_uni;
 
 public interface OneToManyDAOI {
 

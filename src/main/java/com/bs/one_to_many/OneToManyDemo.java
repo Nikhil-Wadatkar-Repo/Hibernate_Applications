@@ -12,7 +12,11 @@ public class OneToManyDemo {
 		OneToManyDAOI methods=new OneToManyDAOImpl();
 		
 //		methods.saveDataUsingExmployee();
-		methods.loadDataUsingExmployee();
+//		methods.loadDataUsingExmployee();
+//		methods.addNewDataToExistingEmployee();
+//		methods.deleteEmployeWithLicenses();
+//		methods.deleteOneLicenseOfEmployee();
+//		methods.deleteAllLicenseOfEmployee();
 		
 		
 		

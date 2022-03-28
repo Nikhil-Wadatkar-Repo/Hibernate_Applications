@@ -1,7 +1,8 @@
-package com.bs.one_to_many_uni;
+package com.bs.one_to_many_list_uni;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
+import java.util.ArrayList;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -11,13 +12,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
+import javax.persistence.OrderColumn;
 import javax.persistence.Table;
 
 import org.hibernate.annotations.GenericGenerator;
 
 @Entity
-@Table
-public class Employee {
+@Table(name = "Employee_List")
+public class EmployeeList {
 	@Id
 	@Column(name = "emp_id")
 	@GenericGenerator(name = "gen1", strategy = "increment")
@@ -25,15 +27,25 @@ public class Employee {
 	private int id;
 	private int age;
 	private String firstName, lastName;
-	@OneToMany(targetEntity = LicenseDetails.class, orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+	
+	@OneToMany(targetEntity = LicenseDetails_List.class, orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name = "UNID", referencedColumnName = "emp_id")
-	private Set<LicenseDetails> license;
+	@OrderColumn(name = "listIndexCol")
+	private List<LicenseDetails_List> license;
 
-	public Employee() {
+	public List<LicenseDetails_List> getLicense() {
+		return license;
+	}
+
+	public void setLicense(List<LicenseDetails_List> license) {
+		this.license = license;
+	}
+
+	public EmployeeList() {
 		super();
 	}
 
-	public Employee(int id, int age, String firstName, String lastName) {
+	public EmployeeList(int id, int age, String firstName, String lastName) {
 		super();
 		this.id = id;
 		this.age = age;
@@ -73,13 +85,7 @@ public class Employee {
 		this.age = age;
 	}
 
-	public Set<LicenseDetails> getLicense() {
-		return license;
-	}
-
-	public void setLicense(Set<LicenseDetails> license) {
-		this.license = license;
-	}
+	
 
 	@Override
 	public String toString() {

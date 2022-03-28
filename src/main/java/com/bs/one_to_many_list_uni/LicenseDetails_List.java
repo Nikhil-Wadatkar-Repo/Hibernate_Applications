@@ -1,23 +1,23 @@
-package com.bs.one_to_many_uni;
+package com.bs.one_to_many_list_uni;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table
-public class LicenseDetails  {
+@Table(name = "LicenseDetails_List")
+public class LicenseDetails_List  {
 	@Id
 	private int lId;
 	private String name;
 
-	public LicenseDetails(int lId, String name) {
+	public LicenseDetails_List(int lId, String name) {
 		super();
 		this.lId = lId;
 		this.name = name;
 	}
 
-	public LicenseDetails() {
+	public LicenseDetails_List() {
 		super();
 	}
 
@@ -39,7 +39,7 @@ public class LicenseDetails  {
 
 	@Override
 	public String toString() {
-		return "LicenseDetails [lId=" + lId + ", name=" + name + "]";
+		return "LicenseDetails_List [lId=" + lId + ", name=" + name + "]";
 	}
 
 	

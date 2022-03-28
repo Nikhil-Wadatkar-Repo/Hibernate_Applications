@@ -1,4 +1,4 @@
-package com.bs.one_to_many_list_uni;
+package com.bs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,6 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
-import com.bs.HibernateUtil;
 
 public class OneToManyDAOListUniImpl implements OneToManyListDAOI {
 
@@ -36,17 +34,18 @@ public class OneToManyDAOListUniImpl implements OneToManyListDAOI {
 		Session session = HibernateUtil.getSessionFactory().openSession();
 		Query query = session.createQuery("from EmployeeList");
 		List<EmployeeList> parent=query.list();
-		for(EmployeeList emp:parent) {
-			System.out.print(emp);
-			for(LicenseDetails_List child:emp.getLicense())
-				System.out.println(child);
-		}
+		System.out.println(parent);
+//		for(EmployeeList emp:parent) {
+//			System.out.print(emp);
+//			for(LicenseDetails_List child:emp.getLicense())
+//				System.out.println(child);
+//		}
 		
 	}
 
 	public void addNewDataToExistingEmployeeList() {
 		Session session = HibernateUtil.getSessionFactory().openSession();
-		EmployeeList employee=(EmployeeList) session.get(EmployeeList.class, 1);
+		EmployeeList employee=(EmployeeList) session.get(EmployeeList.class, 2);
 		LicenseDetails_List child=new LicenseDetails_List(86, "Voter ID");
 		
 //		get child and save it directly in session

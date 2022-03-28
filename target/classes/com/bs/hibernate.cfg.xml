@@ -12,9 +12,7 @@
         <property name="connection.driver.class">oracle.jdbc.driver.OracleDriver</property> 
          <property name="show_sql">true</property>  
        
-       <!--  <mapping class="com.bs.one_to_many_set_uni.Employee"/>  
-          <mapping class="com.bs.one_to_many_set_uni.LicenseDetails"/>  -->
-          <mapping class="com.bs.one_to_many_list_uni.EmployeeList"/>  
-          <mapping class="com.bs.one_to_many_list_uni.LicenseDetails_List"/> 
+          <mapping class="com.bs.EmployeeList"/>  
+          <mapping class="com.bs.LicenseDetails_List"/> 
     </session-factory>  
 </hibernate-configuration>  

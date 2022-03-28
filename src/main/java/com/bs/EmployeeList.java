@@ -1,4 +1,4 @@
-package com.bs.one_to_many_list_uni;
+package com.bs;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,7 @@ public class EmployeeList {
 	
 	@OneToMany(targetEntity = LicenseDetails_List.class, orphanRemoval = true, cascade = CascadeType.ALL, fetch = FetchType.LAZY)
 	@JoinColumn(name = "UNID", referencedColumnName = "emp_id")
-	@OrderColumn(name = "listIndexCol")
+//	@OrderColumn(name = "listIndexCol")
 	private List<LicenseDetails_List> license;
 
 	public List<LicenseDetails_List> getLicense() {
@@ -85,11 +85,12 @@ public class EmployeeList {
 		this.age = age;
 	}
 
-	
-
 	@Override
 	public String toString() {
-		return "\n" + id + " " + firstName + " " + lastName + " " + age;
+		return "EmployeeList [id=" + id + ", age=" + age + ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", license=" + license + "]";
 	}
+
+	
 
 }

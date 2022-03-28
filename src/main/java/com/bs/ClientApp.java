@@ -1,6 +1,4 @@
-package com.bs.one_to_many_list_uni;
-
-import com.bs.HibernateUtil;
+package com.bs;
 
 public class ClientApp {
 
@@ -10,12 +8,12 @@ public class ClientApp {
 		OneToManyListDAOI methods=new OneToManyDAOListUniImpl();
 		
 		
-//		methods.saveDataUsingExmployeeList();
+		methods.saveDataUsingExmployeeList();
 //		methods.loadDataUsingExmployeeList();
 //		methods.addNewDataToExistingEmployeeList();
 //		methods.deleteEmployeListWithLicenses();
 //		methods.deleteOneLicenseOfEmployeeList();
-		methods.deleteAllLicenseOfEmployeeList();
+//		methods.deleteAllLicenseOfEmployeeList();
 		
 		
 		

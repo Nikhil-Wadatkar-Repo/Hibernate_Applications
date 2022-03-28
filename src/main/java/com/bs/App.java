@@ -6,7 +6,7 @@ import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
-import com.bs.one_to_many_uni.Employee;
+import com.bs.one_to_many_set_uni.Employee;
 //select query for 
 //1. retrieving whole table using list(), iterate()
 //2. retrieving specific columns of table return list of Object[]

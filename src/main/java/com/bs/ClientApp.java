@@ -1,6 +1,4 @@
-package com.bs.one_to_many_list_uni;
-
-import com.bs.HibernateUtil;
+package com.bs;
 
 public class ClientApp {
 

@@ -1,10 +1,8 @@
-package com.bs.one_to_many_set_uni;
+package com.bs;
 
 import org.hibernate.Session;
 
-import com.bs.HibernateUtil;
-
-public class OneToManyDemo {
+public class ClientApp {
 
 	public static void main(String[] args) {
 		

@@ -1,4 +1,4 @@
-package com.bs.one_to_many_set_uni;
+package com.bs;
 
 import java.util.Arrays;
 import java.util.HashSet;
@@ -9,8 +9,6 @@ import java.util.TreeSet;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
-
-import com.bs.HibernateUtil;
 
 public class OneToManyDAOImpl implements OneToManyDAOI {
 

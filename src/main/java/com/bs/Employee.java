@@ -1,4 +1,4 @@
-package com.bs.one_to_many_set_uni;
+package com.bs;
 
 import java.util.List;
 import java.util.Set;
